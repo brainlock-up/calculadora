@@ -1,0 +1,6 @@
+{
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "explicit",
+    "editor.cursorWidth": 2,
+    "editor.wordWrap": "wordWrapColumn"
+}

@@ -1,0 +1,124 @@
+@font-face{
+    font-family: 'digital';
+    src: url(../ds_digital/DS-DIGIT.TTF) format(TrueType) ;
+    font-size: normal;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    
+}
+.background{
+    background-image:url('/img/mesa.jpeg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    filter: brightness(0.8);
+  
+}
+.box{
+    
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 50px;
+    width:  300px;
+    height:  520px;
+    border: 1px solid;
+    font-size: x-large;
+    background-color: black;
+    box-shadow: 0 0 5px 5px black;
+    filter: brightness(1)
+}
+.visor::-webkit-scrollbar{
+    width: 2px;
+    height: 100%;
+}
+.visor{
+    width: 300px;
+    height: 200px;
+    border-radius: 50px 50px 0px 0px;
+    background-color: rgb(134, 255, 134);
+    border: 10px solid rgba(0, 0, 0, 0.666);
+    color:rgb(23, 96, 23);
+    font-size: 30px;
+    font-weight: 600;
+    box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.371);
+    overflow-x: scroll;
+    word-wrap: break-word;
+    padding: 15px ;
+}
+.visor span{
+    font-family: 'digital';
+    font-size: 40px;
+    word-wrap: break-word;
+    display: block;
+}
+.operadores{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: max-content;
+    margin: 10px 0;
+}
+.num-simbol{
+    display: flex;
+    justify-content: space-evenly; 
+    width: 100%;
+    align-content:space-evenly;
+    align-items: stretch;
+}
+.numeros{
+    display: grid;
+    grid-template-columns:repeat(3,50px) ;
+    grid-template-rows: repeat(4,50px);
+    grid-gap: 9px;
+    
+    height: 100%;
+    width: 70%;
+    justify-content: space-around; 
+}
+.simbolos{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 19px;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: violet;
+    color: white;
+    text-shadow: 0 0 5px black ;
+    Font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    font-size: 30px;
+    
+}
+
+.operadores button{
+    background-color: rgb(129, 129, 15);
+    color: white;
+}
+.igual{/* botao ==*/
+    width: 50px;
+    height: 150px;
+    border-radius: 25px;
+    background-color: rgb(9, 149, 103);
+    color: white;
+}
+button:hover{
+    background-color: brown;
+    transform: scale(1.2);
+    transition: transform 0.1s ease;
+}
