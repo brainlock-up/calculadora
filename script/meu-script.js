@@ -1,9 +1,11 @@
 let botoes = document.querySelectorAll("button");
-let tela = document.querySelector(".visor span");
+let tela = document.querySelector(".equacao");
+let telaResult = document.querySelector('.resultado')
 let valorOp ="";
 
 botoes.forEach((botao) => {
   botao.addEventListener("click", () => {
+    telaResult.textContent ="";
     let btnValue = botao.textContent;
     let btnId = botao.id;
     if (btnId === "btn-number") {
@@ -28,7 +30,9 @@ botoes.forEach((botao) => {
     } else if (btnId === "btn-clear") {
       tela.textContent = "";
     } else if (btnId === "btn-resultado") {
-      tela.textContent = showResult(tela.textContent,valorOp);
+        telaResult.textContent = showResult(tela.textContent,valorOp);
+          tela.textContent = "";
+    
     }
   });
 });
